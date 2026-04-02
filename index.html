@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clínica San Rafael</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Botón flotante WhatsApp ───────────────── -->
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/50370000000?text=Hola%2C%20quisiera%20agendar%20una%20cita%20m%C3%A9dica%20en%20Cl%C3%ADnica%20San%20Rafael.%20%C2%BFMe%20podr%C3%ADan%20ayudar%3F"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contactar por WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-label">¡Agenda tu cita!</span>
+  </a>
+
+  <!-- ── Navbar ─────────────────────────────────── -->
+  <nav class="navbar">
+    <div class="container">
+
+      <!-- Logo: reemplaza logo.png con tu imagen real -->
+      <a href="#" class="nav-logo">
+        <img src="img/LogoClinca.avif" alt="Logo Clínica San Rafael" class="nav-logo-img" />
+        <span class="nav-logo-text">Clínica San Rafael</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#medicos">Médicos</a></li>
+        <li><a href="#horarios">Horarios</a></li>
+        <li><a href="#seguros">Seguros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a
+          class="nav-whatsapp"
+          href="https://wa.me/50370000000?text=Hola%2C%20quisiera%20agendar%20una%20cita%20m%C3%A9dica%20en%20Cl%C3%ADnica%20San%20Rafael.%20%C2%BFMe%20podr%C3%ADan%20ayudar%3F"
+          target="_blank" rel="noopener"
+          aria-label="WhatsApp"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <button class="nav-cta" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
+          Agendar cita
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menú">&#9776;</button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ── Hero ───────────────────────────────────── -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-text">
+        <div class="hero-tag">Atención médica de confianza</div>
+        <h1>Su salud,<br>nuestra prioridad</h1>
+        <p>Más de 15 años brindando atención médica integral a familias de Santa Ana y sus alrededores. Especialistas certificados y tecnología moderna.</p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
+            <i class="fa-solid fa-calendar-check"></i> Agendar cita
+          </button>
+          <button class="btn-outline" onclick="document.getElementById('servicios').scrollIntoView({behavior:'smooth'})">
+            Ver servicios
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="appt-next">
+          <!-- Foto del doctor — reemplaza dr-mendez.jpg con tu imagen -->
+          <div class="avatar avatar-img">
+            <img src="dr-mendez.jpg" alt="Dr. Roberto Méndez" onerror="this.parentElement.textContent='RM'" />
+          </div>
+          <div>
+            <p class="appt-name">Dr. Roberto Méndez</p>
+            <p class="appt-spec">Medicina General</p>
+          </div>
+          <div class="appt-time">
+            <strong>10:30 AM</strong>
+            <span>Lun 7 Abr</span>
+          </div>
+        </div>
+        <div class="card-row">
+          <div class="mini-card">
+            <p class="label">Horario</p>
+            <p class="val">Lun — Sáb</p>
+            <p class="sub">7am – 6pm</p>
+          </div>
+          <div class="mini-card">
+            <p class="label">Urgencias</p>
+            <p class="val" style="color:var(--verde)">24 / 7</p>
+            <p class="sub">Siempre disponible</p>
+          </div>
+        </div>
+        <div class="stats-row">
+          <div class="stat"><strong>+3,500</strong><span>Pacientes</span></div>
+          <div class="stat"><strong>8</strong><span>Especialistas</span></div>
+          <div class="stat"><strong>15+</strong><span>Años</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Por qué elegirnos ───────────────────────── -->
+  <section class="why">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon"><i class="fa-solid fa-shield-heart"></i></div>
+          <h4>Atención personalizada</h4>
+          <p>Cada paciente recibe atención individual con tiempo suficiente para resolver todas sus dudas.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon"><i class="fa-solid fa-microscope"></i></div>
+          <h4>Tecnología de punta</h4>
+          <p>Equipos modernos de diagnóstico para resultados precisos y rápidos.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon"><i class="fa-solid fa-user-doctor"></i></div>
+          <h4>Especialistas certificados</h4>
+          <p>Todo nuestro equipo cuenta con certificaciones nacionales e internacionales.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon"><i class="fa-solid fa-file-medical"></i></div>
+          <h4>Expediente digital</h4>
+          <p>Su historial médico siempre disponible y actualizado para mejor seguimiento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Servicios ──────────────────────────────── -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <p class="section-label">Lo que ofrecemos</p>
+      <h2 class="section-title">Nuestros servicios</h2>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-stethoscope"></i></div>
+          <h3>Medicina General</h3>
+          <p>Consultas de rutina, control de enfermedades crónicas y atención preventiva.</p>
+          <span class="service-price">Desde $15</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-baby"></i></div>
+          <h3>Pediatría</h3>
+          <p>Cuidado especializado para niños desde recién nacidos hasta 15 años.</p>
+          <span class="service-price">Desde $20</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <h3>Cardiología</h3>
+          <p>Electrocardiogramas, ecocardiografía y monitoreo cardiovascular.</p>
+          <span class="service-price">Desde $35</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-flask"></i></div>
+          <h3>Laboratorio</h3>
+          <p>Análisis de sangre, orina y más. Resultados en el mismo día.</p>
+          <span class="service-price">Desde $10</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-wave-square"></i></div>
+          <h3>Ultrasonido</h3>
+          <p>Ecografías abdominales, obstétricas y de partes blandas.</p>
+          <span class="service-price">Desde $25</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-truck-medical"></i></div>
+          <h3>Urgencias</h3>
+          <p>Atención de emergencias las 24 horas, los 7 días de la semana.</p>
+          <span class="service-price">24 / 7</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-x-ray"></i></div>
+          <h3>Rayos X</h3>
+          <p>Radiografías digitales de alta resolución con resultados inmediatos.</p>
+          <span class="service-price">Desde $18</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-syringe"></i></div>
+          <h3>Vacunación</h3>
+          <p>Plan completo de vacunas para niños y adultos según esquema nacional.</p>
+          <span class="service-price">Desde $8</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-venus"></i></div>
+          <h3>Ginecología</h3>
+          <p>Control prenatal, Papanicolaou, colposcopía y atención femenina integral.</p>
+          <span class="service-price">Desde $25</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Médicos ─────────────────────────────────── -->
+  <section class="doctors" id="medicos">
+    <div class="container">
+      <p class="section-label">Nuestro equipo</p>
+      <h2 class="section-title">Médicos especialistas</h2>
+      <div class="doctors-grid">
+
+        <div class="doctor-card">
+          <!-- Foto médico: reemplaza dr-mendez.jpg con tu imagen real -->
+          <div class="doc-photo-wrap">
+            <img src="dr-mendez.jpg" alt="Dr. Roberto Méndez" class="doc-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="doc-avatar-fallback" style="background:#E1F5EE;color:#085041">RM</div>
+          </div>
+          <h3>Dr. Roberto Méndez</h3>
+          <p class="doc-spec">Medicina General</p>
+          <p class="doc-edu"><i class="fa-solid fa-graduation-cap"></i> Univ. de El Salvador</p>
+          <span class="badge">Lun – Vie · 7am–5pm</span>
+        </div>
+
+        <div class="doctor-card">
+          <!-- Foto médico: reemplaza dra-castro.jpg -->
+          <div class="doc-photo-wrap">
+            <img src="dra-castro.jpg" alt="Dra. Laura Castro" class="doc-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="doc-avatar-fallback" style="background:#EEEDFE;color:#3C3489">LC</div>
+          </div>
+          <h3>Dra. Laura Castro</h3>
+          <p class="doc-spec">Pediatría</p>
+          <p class="doc-edu"><i class="fa-solid fa-graduation-cap"></i> Hospital Bloom</p>
+          <span class="badge">Mar – Sáb · 8am–4pm</span>
+        </div>
+
+        <div class="doctor-card">
+          <!-- Foto médico: reemplaza dr-villalta.jpg -->
+          <div class="doc-photo-wrap">
+            <img src="dr-villalta.jpg" alt="Dr. Jorge Villalta" class="doc-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="doc-avatar-fallback" style="background:#FAECE7;color:#712B13">JV</div>
+          </div>
+          <h3>Dr. Jorge Villalta</h3>
+          <p class="doc-spec">Cardiología</p>
+          <p class="doc-edu"><i class="fa-solid fa-graduation-cap"></i> Univ. Autónoma</p>
+          <span class="badge">Lun · Mié · Vie</span>
+        </div>
+
+        <div class="doctor-card">
+          <!-- Foto médico: reemplaza dra-morales.jpg -->
+          <div class="doc-photo-wrap">
+            <img src="dra-morales.jpg" alt="Dra. Ana Morales" class="doc-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="doc-avatar-fallback" style="background:#FAEEDA;color:#633806">AM</div>
+          </div>
+          <h3>Dra. Ana Morales</h3>
+          <p class="doc-spec">Ginecología</p>
+          <p class="doc-edu"><i class="fa-solid fa-graduation-cap"></i> Univ. de El Salvador</p>
+          <span class="badge">Mar – Sáb · 9am–5pm</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Horarios ────────────────────────────────── -->
+  <section class="horarios" id="horarios">
+    <div class="container">
+      <p class="section-label">Planifique su visita</p>
+      <h2 class="section-title">Horarios de atención</h2>
+      <div class="horarios-grid">
+
+        <div class="horario-card">
+          <div class="horario-icon"><i class="fa-solid fa-stethoscope"></i></div>
+          <h4>Consulta General</h4>
+          <ul>
+            <li><span>Lunes – Viernes</span><strong>7:00am – 6:00pm</strong></li>
+            <li><span>Sábados</span><strong>7:00am – 12:00pm</strong></li>
+            <li><span>Domingos</span><strong>Urgencias únicamente</strong></li>
+          </ul>
+        </div>
+
+        <div class="horario-card">
+          <div class="horario-icon"><i class="fa-solid fa-flask"></i></div>
+          <h4>Laboratorio</h4>
+          <ul>
+            <li><span>Lunes – Viernes</span><strong>6:30am – 5:00pm</strong></li>
+            <li><span>Sábados</span><strong>6:30am – 11:00am</strong></li>
+            <li><span>Nota</span><strong>Ayuno requerido para algunos exámenes</strong></li>
+          </ul>
+        </div>
+
+        <div class="horario-card urgencias-card">
+          <div class="horario-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+          <h4>Urgencias</h4>
+          <ul>
+            <li><span>Todos los días</span><strong>24 horas / 7 días</strong></li>
+            <li><span>Feriados</span><strong>Servicio completo</strong></li>
+            <li><span>Teléfono urgencias</span><strong>+503 2441-9999</strong></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Seguros ─────────────────────────────────── -->
+  <section class="seguros" id="seguros">
+    <div class="container">
+      <p class="section-label">Convenios</p>
+      <h2 class="section-title">Seguros y convenios aceptados</h2>
+      <p class="seguros-desc">Trabajamos con las principales aseguradoras del país para facilitar su atención médica.</p>
+      <div class="seguros-grid">
+        <div class="seguro-item"><i class="fa-solid fa-shield-halved"></i><span>ISSS</span></div>
+        <div class="seguro-item"><i class="fa-solid fa-shield-halved"></i><span>IPSFA</span></div>
+        <div class="seguro-item"><i class="fa-solid fa-shield-halved"></i><span>SISA Seguros</span></div>
+        <div class="seguro-item"><i class="fa-solid fa-shield-halved"></i><span>MAPFRE</span></div>
+        <div class="seguro-item"><i class="fa-solid fa-shield-halved"></i><span>Seguros Futuro</span></div>
+        <div class="seguro-item"><i class="fa-solid fa-shield-halved"></i><span>HSBC Seguros</span></div>
+      </div>
+      <p class="seguros-nota"><i class="fa-solid fa-circle-info"></i> Consulte en recepción si su seguro no aparece en la lista.</p>
+    </div>
+  </section>
+
+  <!-- ── Testimonios ─────────────────────────────── -->
+  <section class="testimonios">
+    <div class="container">
+      <p class="section-label">Lo que dicen nuestros pacientes</p>
+      <h2 class="section-title">Testimonios</h2>
+      <div class="testimonios-grid">
+
+        <div class="testimonio-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"Excelente atención. El Dr. Méndez se tomó el tiempo de explicarme todo con detalle. Muy profesional y amable."</p>
+          <div class="testimonio-autor">
+            <div class="autor-avatar" style="background:#E1F5EE;color:#085041">MG</div>
+            <div>
+              <strong>María García</strong>
+              <span>Paciente desde 2019</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"Llevo a mis hijos con la Dra. Castro desde que nacieron. Siempre puntual y muy atenta con los pequeños."</p>
+          <div class="testimonio-autor">
+            <div class="autor-avatar" style="background:#EEEDFE;color:#3C3489">CR</div>
+            <div>
+              <strong>Carlos Rivas</strong>
+              <span>Paciente desde 2021</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"Las instalaciones están muy limpias y el personal es muy amable. Los resultados del laboratorio llegaron el mismo día."</p>
+          <div class="testimonio-autor">
+            <div class="autor-avatar" style="background:#FAEEDA;color:#633806">SL</div>
+            <div>
+              <strong>Sofía López</strong>
+              <span>Paciente desde 2022</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contacto ────────────────────────────────── -->
+  <section class="contact" id="contacto">
+    <div class="container">
+
+      <div>
+        <h2>¿Listo para agendar<br>su cita?</h2>
+        <p class="intro">Estamos ubicados en el centro de Santa Ana, de fácil acceso. Llámenos, escríbanos o visítenos directamente.</p>
+        <br>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <p class="label">Teléfono fijo</p>
+              <p class="val">+503 2441-0000</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div>
+              <p class="label">WhatsApp</p>
+              <a
+                class="val whatsapp-link"
+                href="https://wa.me/50370000000?text=Hola%2C%20quisiera%20agendar%20una%20cita%20m%C3%A9dica%20en%20Cl%C3%ADnica%20San%20Rafael.%20%C2%BFMe%20podr%C3%ADan%20ayudar%3F"
+                target="_blank" rel="noopener"
+              >+503 7000-0000 →</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <p class="label">Dirección</p>
+              <p class="val">3a Calle Pte #14, Santa Ana</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <p class="label">Horario general</p>
+              <p class="val">Lun – Sáb: 7:00am – 6:00pm</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <p class="label">Correo electrónico</p>
+              <p class="val">info@clinicasanrafael.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulario Formspree -->
+      <form class="contact-form" action="https://formspree.io/f/XXXXXXXX" method="POST">
+        <div class="form-row">
+          <div>
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan García" required />
+          </div>
+          <div>
+            <label for="telefono">Teléfono *</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+503 0000-0000" required />
+          </div>
+        </div>
+        <div>
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" />
+        </div>
+        <div>
+          <label for="servicio">Servicio de interés *</label>
+          <select id="servicio" name="servicio" required>
+            <option value="">Seleccione un servicio</option>
+            <option>Medicina General</option>
+            <option>Pediatría</option>
+            <option>Cardiología</option>
+            <option>Ginecología</option>
+            <option>Laboratorio</option>
+            <option>Ultrasonido</option>
+            <option>Rayos X</option>
+            <option>Vacunación</option>
+            <option>Urgencias</option>
+          </select>
+        </div>
+        <div>
+          <label for="fecha">Fecha preferida</label>
+          <input type="date" id="fecha" name="fecha" />
+        </div>
+        <div>
+          <label for="mensaje">Mensaje adicional</label>
+          <textarea id="mensaje" name="mensaje" placeholder="¿Algo que desee agregar o consultar?"></textarea>
+        </div>
+        <button type="submit" class="form-submit">
+          <i class="fa-solid fa-paper-plane"></i> Enviar solicitud de cita
+        </button>
+        <p class="form-nota">* Le contactaremos para confirmar su cita en menos de 24 horas.</p>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-block">
+          <img src="logo.png" alt="Logo Clínica San Rafael" class="footer-logo" onerror="this.style.display='none'" />
+          <span class="footer-brand">Clínica San Rafael</span>
+          <p class="footer-tagline">Cuidando su salud desde 2010.</p>
+        </div>
+        <div class="footer-links-block">
+          <h5>Navegación</h5>
+          <ul>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#medicos">Médicos</a></li>
+            <li><a href="#horarios">Horarios</a></li>
+            <li><a href="#seguros">Seguros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-block">
+          <h5>Contacto rápido</h5>
+          <ul>
+            <li><i class="fa-solid fa-phone"></i> +503 2441-0000</li>
+            <li><i class="fa-brands fa-whatsapp"></i> +503 7000-0000</li>
+            <li><i class="fa-solid fa-location-dot"></i> 3a Calle Pte #14, Santa Ana</li>
+          </ul>
+        </div>
+        <div class="footer-social-block">
+          <h5>Síguenos</h5>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a
+              href="https://wa.me/50370000000?text=Hola%2C%20quisiera%20agendar%20una%20cita%20m%C3%A9dica%20en%20Cl%C3%ADnica%20San%20Rafael."
+              target="_blank" rel="noopener" aria-label="WhatsApp"
+            ><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2026 Clínica San Rafael. Todos los derechos reservados.</span>
+        <span class="footer-copy">Diseño web por <strong>Coders Solutions</strong></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
